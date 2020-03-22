@@ -22,7 +22,6 @@ Downsides to tackle:
     - Handle N+1 queries for Bids by using DB JOINS.
 
 ## TODO
------------
 
 - Use actual DB engine instead of current on memory one.
 - Write unit tests to each component.
@@ -34,7 +33,6 @@ Downsides to tackle:
 
 
 ## Development
------------
 
 Development is running using on bar metal.
 
