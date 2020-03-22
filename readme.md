@@ -21,8 +21,19 @@ Downsides to tackle:
 - Performance Cautions:
     - Handle N+1 queries for Bids by using DB JOINS.
 
+## TODO
+-----------
 
-Development
+- Use actual DB engine instead of current on memory one.
+- Write unit tests to each component.
+- Write integration tests for APIs.
+- Secure APIs.
+- Enhance matching, adding and comparing bids, currently it's very naive.
+- Add [Pre-commit](https://github.com/pre-commit/pre-commit) to the application repo to maintain the structure and code style.
+- If needed containerizing the application using [Docker](https://docker.com).
+
+
+## Development
 -----------
 
 Development is running using on bar metal.
@@ -39,12 +50,3 @@ $ python3 main.py
 ```
 
 You can now access on <http://0.0.0.0:8989/>
-s
-## TODO
-- Use actual DB engine instead of current on memory one.
-- Write unit tests to each component.
-- Write integration tests for APIs.
-- Secure APIs.
-- Enhance matching, adding and comparing bids, currently it's very naive.
-- Add [Pre-commit](https://github.com/pre-commit/pre-commit) to the application repo to maintain the structure and code style.
-- If needed containerizing the application using [Docker](https://docker.com).
