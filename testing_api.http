@@ -1,0 +1,23 @@
+
+
+POST http://0.0.0.0:8989/api/v1/items/1/bid/
+Content-Type: application/json
+
+{
+    "user_id": 5,
+    "amount": 57
+}
+
+###
+
+
+GET http://0.0.0.0:8989/api/v1/items/1/bids/
+###
+
+
+GET http://0.0.0.0:8989/api/v1/user/1/items/
+
+
+###
+
+GET http://0.0.0.0:8989/api/v1/items/1/bids/winnings/
