@@ -1,0 +1,24 @@
+on: [pull_request]
+
+jobs:
+  pr_lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: vijaykramesh/pr-lint-action@v1.0
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  code_lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: grantmcconnaughey/lintly-flake8-github-action@v1.0
+        with:
+          # The GitHub API token to create reviews with
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Fail if "new" violations detected or "any", default "new"
+          failIf: new
+          # Additional arguments to pass to flake8, default "." (current directory)
+          args: "src/"
